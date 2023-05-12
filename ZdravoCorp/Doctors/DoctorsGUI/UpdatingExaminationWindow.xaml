@@ -1,0 +1,40 @@
+﻿<Window x:Class="ZdravoCorp.Doctors.DoctorsGUI.UpdatingExaminationWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ZdravoCorp.Doctors.DoctorsGUI"
+        mc:Ignorable="d"
+        Title="UpdatingExaminationWindow" Height="450" Width="800" Background="Azure">
+    
+    <Window.Resources>
+        <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
+    </Window.Resources>
+
+    <Grid>
+        <Label   Content="Patient Id : " HorizontalAlignment="Left" Margin="37,59,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.526,1.542" Width="78" FontSize="14" FontFamily="Cambria Math"/>
+        <Label Content="Examination Data" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Width="176" FontWeight="Bold" FontSize="20" FontFamily="Cambria Math" Background="PapayaWhip"/>
+        <TextBlock x:Name="patientId" HorizontalAlignment="Left" Text="{Binding patientId}"  Margin="115,64,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"/>
+        <Label Content="Doctor Id : " HorizontalAlignment="Left" Margin="37,90,0,0" VerticalAlignment="Top" Width="78" FontSize="14" FontFamily="Cambria Math"/>
+        <TextBlock x:Name="doctorId" HorizontalAlignment="Left"  Text="{Binding doctorId}" Margin="115,94,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="112" Height="22"/>
+        <Label Content="TimeSlot of Examination : " HorizontalAlignment="Left" Margin="37,144,0,0" VerticalAlignment="Top" FontSize="14" FontFamily="Cambria Math" FontWeight="Bold"/>
+        <Label Content="Date of Examination : " HorizontalAlignment="Left" Margin="233,142,0,0" VerticalAlignment="Top" Width="135" FontSize="13"/>
+        <TextBox x:Name="date" HorizontalAlignment="Left"  Text="{Binding timeSlot.start, StringFormat='{}{0:yyyy-MM-dd}'}" Margin="373,146,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="22" FontSize="13"/>
+        <Label Content="Time of Examination : "  HorizontalAlignment="Left" Margin="235,189,0,0" VerticalAlignment="Top" Width="133" FontSize="13"/>
+        <TextBox x:Name="time" HorizontalAlignment="Left" Text="{Binding timeSlot.start, StringFormat='{}{0:HH:mm:ss}'}" Margin="373,189,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="22" FontSize="13"/>
+        <CheckBox x:Name="isOperationCheckBox" IsEnabled="False" Content="Is Operation" IsChecked="{Binding isOperation}" HorizontalAlignment="Left" Margin="610,105,0,0" VerticalAlignment="Top" FontSize="14" FontFamily="Cambria Math" FontWeight="Bold" RenderTransformOrigin="0.517,1.3"/>
+        <CheckBox x:Name="isEmergency" IsEnabled="False" Content="Is Emergency" IsChecked="{Binding isEmergency}" HorizontalAlignment="Left" Margin="610,53,0,0" VerticalAlignment="Top" Width="120" FontSize="14" FontFamily="Cambria Math" FontWeight="Bold"/>
+        <Label Content="Duration of Examination : " HorizontalAlignment="Left"   Margin="235,249,0,0" VerticalAlignment="Top" FontSize="13" />
+        <TextBlock x:Name="durationOfExamination"  Text="{Binding timeSlot.duration,StringFormat={}{0:%m}}"  HorizontalAlignment="Left"  Margin="400,255,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="25"/>
+        <Button Content="Update Examination Data" HorizontalAlignment="Left" Margin="265,354,0,0" VerticalAlignment="Top" Width="285" FontWeight="Bold" FontSize="13" Background="PapayaWhip" Height="30" Click="Button_Click"/>
+        <Label Content="Examination ID :" HorizontalAlignment="Left" Margin="599,353,0,0" VerticalAlignment="Top" Width="108" FontFamily="Cambria Math" FontSize="13"/>
+        <TextBlock x:Name="id" HorizontalAlignment="Left" Text="{Binding id}" Margin="707,356,0,0" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.507,1.193" Height="26" Width="65"/>
+        <Label Content="Status of Examination :" HorizontalAlignment="Left" Margin="37,289,0,0" VerticalAlignment="Top" Width="148" FontFamily="Cambria Math" FontSize="14"/>
+        <ComboBox Name="statusComboBox" Text="{Binding status}" HorizontalAlignment="Left" Margin="193,290,0,0" VerticalAlignment="Top" Width="120" Height="25">
+
+        </ComboBox>
+        <Label Content="New operation duration: "  Visibility="{Binding ElementName=isOperationCheckBox, Path=IsChecked, Converter={StaticResource BooleanToVisibilityConverter} }" HorizontalAlignment="Left" Margin="556,144,0,0" VerticalAlignment="Top" FontSize="14" FontFamily="Cambria Math"/>
+        <TextBox x:Name="durationOfOperation" HorizontalAlignment="Left"  Visibility="{Binding ElementName=isOperationCheckBox, Path=IsChecked, Converter={StaticResource BooleanToVisibilityConverter} }" Margin="707,142,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="65" Height="25"/>
+
+    </Grid>
+</Window>

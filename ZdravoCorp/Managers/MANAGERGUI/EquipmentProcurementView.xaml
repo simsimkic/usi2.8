@@ -1,0 +1,38 @@
+﻿<Window x:Class="ZdravoCorp.Managers.MANAGERGUI.EquipmentProcurementView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ZdravoCorp.Managers.MANAGERGUI"
+        mc:Ignorable="d"
+        Title="EquipmentProcurementView" Height="450" Width="800" Background="AliceBlue">
+    <Grid Margin="0,51,0,0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="260*"/>
+            <ColumnDefinition Width="40*"/>
+            <ColumnDefinition Width="167*"/>
+            <ColumnDefinition Width="92*"/>
+            <ColumnDefinition Width="241*"/>
+        </Grid.ColumnDefinitions>
+        <DataGrid  Name="EquipmentStateGrid" Margin="253,27,219,50" ColumnWidth="200" IsReadOnly="True" Grid.ColumnSpan="5">
+            <DataGrid.Resources>
+                <Style TargetType="{x:Type DataGridColumnHeader}">
+                    <Setter Property="Background" Value="Turquoise"/>
+                    <Setter Property="FontWeight" Value="SemiBold"/>
+                    <Setter Property="BorderThickness" Value="0,0,2,2"/>
+                    <Setter Property="BorderBrush" Value="Black"/>
+                </Style>
+            </DataGrid.Resources>
+            <DataGrid.Columns>
+
+            </DataGrid.Columns>
+        </DataGrid>
+        <Label Content="Dynamical Equipment State" HorizontalAlignment="Left" Margin="253,-36,0,0" VerticalAlignment="Top" Grid.ColumnSpan="5" Width="328" Height="42" RenderTransformOrigin="0.779,0.31"  FontFamily="Algerian" FontWeight="Bold" FontSize="20" Background="PowderBlue"/>
+        <Button Grid.Column="4" Content="Back" HorizontalAlignment="Left" Margin="101,323,0,0" VerticalAlignment="Top" Width="89" Click="backButton_Click"/>
+        <Label Content="Select equipment:" HorizontalAlignment="Left" Margin="52,0,0,0" VerticalAlignment="Top" Width="138" FontWeight="Bold" FontFamily="Bradley Hand ITC" FontSize="15" Background="#FF7831DF" />
+        <ComboBox x:Name="selectEquipment" HorizontalAlignment="Left" Margin="35,54,0,0" VerticalAlignment="Top" Width="172" SelectionChanged="setSelectedEquipment" Height="24"/>
+        <Label Content="Quantity: " HorizontalAlignment="Left" Margin="33,133,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.484,0.225" Width="88" FontWeight="Bold" FontFamily="Bradley Hand ITC" FontSize="15"/>
+        <TextBox x:Name="quantityTextBox" HorizontalAlignment="Left" Margin="130,133,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="44" Height="29" TextChanged="setSelectedQuantity" RenderTransformOrigin="0.598,0.068"/>
+        <Button Content="Send request" HorizontalAlignment="Center" Margin="0,215,0,0" VerticalAlignment="Top" Width="154" Height="36" FontWeight="Bold" FontFamily="Bradley Hand ITC" FontSize="15" Click="requestButtonClick" RenderTransformOrigin="0.516,2.346"/>
+    </Grid>
+</Window>

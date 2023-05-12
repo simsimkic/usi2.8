@@ -1,0 +1,62 @@
+﻿<Window x:Name="patientDataWindow" x:Class="ZdravoCorp.Nurses.PatientDataWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ZdravoCorp.Nurses"
+        mc:Ignorable="d" Height="501" Width="770">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="61*"/>
+            <ColumnDefinition Width="22*"/>
+            <ColumnDefinition Width="717*"/>
+        </Grid.ColumnDefinitions>
+        <Label Content="Input data patient:" HorizontalAlignment="Left" Margin="133,10,0,0" VerticalAlignment="Top" Width="376" FontWeight="Bold" FontSize="35" Grid.Column="2"/>
+        <Label Grid.Column="2" Content="Name:" HorizontalAlignment="Left" Margin="56,90,0,0" VerticalAlignment="Top" Width="91"/>
+        <Label Grid.Column="2" Content="Surname:" HorizontalAlignment="Left" Margin="56,116,0,0" VerticalAlignment="Top" Width="91"/>
+        <Label Grid.Column="2" Content="Username:" HorizontalAlignment="Left" Margin="56,142,0,0" VerticalAlignment="Top" Width="91"/>
+        <Label Grid.Column="2" Content="Password:" HorizontalAlignment="Left" Margin="56,168,0,0" VerticalAlignment="Top" Width="91"/>
+        <Label Grid.Column="2" Content="Phone number:" HorizontalAlignment="Left" Margin="56,194,0,0" VerticalAlignment="Top" Width="91"/>
+        <Label Grid.Column="2" Content="Gender:" HorizontalAlignment="Left" Margin="56,220,0,0" VerticalAlignment="Top" Width="91"/>
+        <Label Grid.Column="2" Content="Heigth:" HorizontalAlignment="Left" Margin="56,251,0,0" VerticalAlignment="Top" Width="91"/>
+        <Label Grid.Column="2" Content="Weight:" HorizontalAlignment="Left" Margin="56,282,0,0" VerticalAlignment="Top" Width="91"/>
+        <Label Grid.Column="2" Content="Allergens:" HorizontalAlignment="Left" Margin="56,313,0,0" VerticalAlignment="Top" Width="91"/>
+        <Button x:Name="ButtonAdd" Grid.Column="2" Content="Add medical history" HorizontalAlignment="Left" Margin="345,360,0,0" VerticalAlignment="Top" Click="ButtonAdd_Click"/>
+        <TextBox x:Name="TextBoxName" Grid.Column="2" HorizontalAlignment="Left" Margin="152,94,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Height="20"/>
+        <TextBox x:Name="TextBoxLastname" Grid.Column="2" HorizontalAlignment="Left" Margin="152,120,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Height="20"/>
+        <TextBox x:Name="TextBoxUsername" Grid.Column="2" HorizontalAlignment="Left" Margin="152,146,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Height="20"/>
+        <TextBox x:Name="TextBoxPassword" Grid.Column="2" HorizontalAlignment="Left" Margin="152,172,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Height="20"/>
+        <TextBox x:Name="TextBoxPhoneNumber" Grid.Column="2" HorizontalAlignment="Left" Margin="152,198,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Height="19"/>
+        <ComboBox x:Name="ComboBoxGender" Grid.Column="2" HorizontalAlignment="Left" Margin="152,222,0,0" VerticalAlignment="Top" Width="120" Height="20" SelectedIndex="0">
+            <ListBoxItem Content="Male"/>
+            <ListBoxItem Content="Female"/>
+        </ComboBox>
+        <TextBox x:Name="TextBoxHeight" Grid.Column="2" HorizontalAlignment="Left" Margin="152,254,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Height="19"/>
+        <TextBox x:Name="TextBoxWeight" Grid.Column="2" HorizontalAlignment="Left" Margin="152,286,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Height="19"/>
+        <TextBox x:Name="TextBoxAllergens" Grid.Column="2" HorizontalAlignment="Left" Margin="152,317,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Height="19"/>
+        <ListView x:Name="ListViewAnamnesis" Grid.Column="2" Margin="345,94,0,146" HorizontalAlignment="Left" Width="296">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Date of MHE" Width="100">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate >
+                                <TextBlock Text="{Binding date}" HorizontalAlignment="Center" />
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Header="Observation" Width="300">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate >
+                                <TextBlock Text="{Binding observation}" HorizontalAlignment="Center" />
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button x:Name="ButtonApply" Grid.Column="2" Content="Apply" HorizontalAlignment="Left" Margin="172,438,0,0" VerticalAlignment="Top" Width="100" Height="20" Click="ButtonApply_Click"/>
+        <Button x:Name="ButtonCancel" Grid.Column="2" Content="Cancel" HorizontalAlignment="Left" Margin="345,438,0,0" VerticalAlignment="Top" Width="100" Height="20" Click="ButtonCancel_Click"/>
+        <Button x:Name="ButtonDelete" Grid.Column="2" Content="Delete medical history" HorizontalAlignment="Left" Margin="519,360,0,0" VerticalAlignment="Top" Click="ButtonDelete_Click"/>
+    </Grid>
+</Window>

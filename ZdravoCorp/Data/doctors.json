@@ -1,0 +1,40 @@
+[
+  {
+    "freeDays": [
+      {
+        "start": "2023-04-03",
+        "end": "2023-05-05",
+        "reason": "ill"
+      }
+    ],
+    "averageGrade": 5.0,
+    "specialty": 0,
+    "id": 2,
+    "name": "Tamara",
+    "lastname": "Zubac",
+    "username": "tamara",
+    "password": "tamara",
+    "phoneNumber": "062/1234567",
+    "gender": 0,
+    "role": 1
+  },
+  {
+    "freeDays": [
+      {
+        "start": "2023-07-03",
+        "end": "2023-10-05",
+        "reason": "ill"
+      }
+    ],
+    "averageGrade": 5.0,
+    "specialty": 1,
+    "id": 5,
+    "name": "Momir",
+    "lastname": "Milutinovic",
+    "username": "momir",
+    "password": "momir",
+    "phoneNumber": "061/1234567",
+    "gender": 1,
+    "role": 1
+  }
+]

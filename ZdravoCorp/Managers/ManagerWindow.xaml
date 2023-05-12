@@ -1,0 +1,18 @@
+﻿<Window x:Name="managerWindow" x:Class="ZdravoCorp.ManagerWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ZdravoCorp"
+        mc:Ignorable="d"
+        Title="Manager" Height="450" Width="800" Background="AliceBlue">
+    <Grid>
+        <Button Content="View , filter and search all  equipment" HorizontalAlignment="Left" Margin="10,101,0,0" VerticalAlignment="Top" Width="255" Height="46" FontFamily="Lucida Calligraphy" Click="Button_Click" RenderTransformOrigin="0.367,0.483"/>
+        <Label Content="MANAGER" HorizontalAlignment="Center" Height="56" Margin="0,28,0,0" VerticalAlignment="Top" Width="224" FontSize="40" FontFamily="Baskerville Old Face"/>
+        <Button Content="Log out" HorizontalAlignment="Left" Margin="671,369,0,0" VerticalAlignment="Top" Width="82" Height="32" Click="LogOut_Button_Click_"/>
+        <Button Content="View all Rooms" HorizontalAlignment="Left" VerticalAlignment="Top" Height="46" Width="248" FontFamily="Lucida Calligraphy" Click="ViewRooms_Button_Click" Margin="288,101,0,0"/>
+        <Button Content="View WareHouse equipment state" HorizontalAlignment="Left" VerticalAlignment="Top" Height="46" Width="229" FontFamily="Lucida Calligraphy" Click="ViewWarehouseEquipmentState_Button_Click" Margin="551,101,0,0"/>
+        <Button Content="Create Request for Equipment Procurement" HorizontalAlignment="Left" Margin="270,175,0,0" VerticalAlignment="Top"  FontFamily="Lucida Calligraphy"  Width="288" Height="52" Click="Equipment_Procurement_Button_Click"/>
+        <Button Content="Equipment Transfer" HorizontalAlignment="Left" Margin="270,248,0,0" VerticalAlignment="Top" Width="288" Height="49" FontFamily="Lucida Calligraphy" Click="equipmentTransferButton_Click"/>
+    </Grid>
+</Window>

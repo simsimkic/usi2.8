@@ -1,0 +1,42 @@
+﻿<Window x:Class="ZdravoCorp.Nurses.CreateMedicalRecord"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ZdravoCorp.Nurses"
+        mc:Ignorable="d"
+        Title="Create medical record" Height="483" Width="668">
+    <Grid Margin="0,0,96,-34">
+        <TextBox x:Name="TextBoxHeight" HorizontalAlignment="Left" Margin="97,66,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Height="19"/>
+        <TextBox x:Name="TextBoxWeight" HorizontalAlignment="Left" Margin="97,119,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Height="20" RenderTransformOrigin="0.065,0.571"/>
+        <TextBox x:Name="TextBoxAllergens" HorizontalAlignment="Left" Margin="97,170,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Height="20"/>
+        <ListView x:Name="ListViewAnamnesis" Margin="251,19,0,262" HorizontalAlignment="Left" Width="296">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Date of MHE" Width="100">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate >
+                                <TextBlock Text="{Binding date}" HorizontalAlignment="Center" />
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Header="Observation" Width="300">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate >
+                                <TextBlock Text="{Binding observation}" HorizontalAlignment="Center" />
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Label Content="Height:" HorizontalAlignment="Left" Margin="30,63,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.009,0.42"/>
+        <Label Content="Weight:" HorizontalAlignment="Left" Margin="30,116,0,0" VerticalAlignment="Top"/>
+        <Label Content="Allergens:" HorizontalAlignment="Left" Margin="30,167,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="ButtonAdd" Content="Add medical history" HorizontalAlignment="Left" Margin="251,264,0,0" VerticalAlignment="Top" Click="ButtonAdd_Click"/>
+        <Button x:Name="ButtonDelete" Content="Delete medical history" HorizontalAlignment="Left" Margin="425,264,0,0" VerticalAlignment="Top" Click="ButtonDelete_Click"/>
+        <Button x:Name="ButtonApply" Content="Apply" HorizontalAlignment="Left" Margin="30,381,0,0" VerticalAlignment="Top" Width="100" Height="25" Click="ButtonApply_Click"/>
+        <Button x:Name="ButtonCancel" Content="Cancel" HorizontalAlignment="Left" Margin="447,381,0,0" VerticalAlignment="Top" Width="100" Height="25" Click="ButtonCancel_Click"/>
+    </Grid>
+</Window>

@@ -1,0 +1,60 @@
+﻿<Window x:Class="ZdravoCorp.Patients.PatientsGUI.CRUDWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ZdravoCorp.Patients.PatientsGUI"
+        mc:Ignorable="d"
+        Title="CRUD for my examinations" Background="PapayaWhip" Height="500" Width="900">
+    <Grid>
+        <Label Content="CRUD for my examinations" HorizontalAlignment="Center" Height="35" Margin="0,0,0,0" VerticalAlignment="Top" Width="280" FontSize="20" FontWeight="Bold"/>
+        <DataGrid x:Name="CRUD_table" SelectionChanged="dataGrid_SelectionChanged" HorizontalAlignment="Center" Margin="0,40,0,0" VerticalAlignment="Top" Width="900" Height="176">
+            <DataGrid.Resources>
+                <Style TargetType="{x:Type DataGridColumnHeader}">
+                    <Setter Property="Background" Value="Coral"/>
+                    <Setter Property="FontWeight" Value="Bold"/>
+                    <Setter Property="BorderThickness" Value="0, 0, 1, 2"/>
+                    <Setter Property="BorderBrush" Value="Black"/>
+                    <Setter Property="HorizontalContentAlignment" Value="Center"></Setter>
+                </Style>
+            </DataGrid.Resources>
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Examinations ID" Width="100" Binding="{Binding id}"></DataGridTextColumn>
+                <DataGridTextColumn Header="is operation?"  Width="100" Binding="{Binding isOperation}"></DataGridTextColumn>
+                <DataGridTextColumn Header="is emergency?" Width="100" Binding="{Binding isEmergency}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Date"  Width="100" Binding="{Binding timeSlot.start.Date, StringFormat={}{0:d}}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Start time" Width="100" Binding="{Binding timeSlot.start.TimeOfDay}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Duration" Width="100" Binding="{Binding timeSlot.duration}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Doctor" Width="100" Binding="{Binding doctorId}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Patient" Width="100" Binding="{Binding patientId}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Status"  Width="100" Binding="{Binding status}"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Label Content="Examination ID" HorizontalAlignment="Left" Height="30" Margin="13,240,0,0" VerticalAlignment="Top" Width="100" Background="WhiteSmoke"/>
+        <TextBox x:Name="id_txt" IsReadOnly="True" HorizontalAlignment="Left" Height="30" Margin="127,240,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="100" Background="WhiteSmoke"/>
+        <Label Content="Is operation?" HorizontalAlignment="Left" Height="30" Margin="13,280,0,0" VerticalAlignment="Top" Width="100" Background="WhiteSmoke"/>
+        <TextBox x:Name="operation_txt" IsReadOnly="True" HorizontalAlignment="Left" Height="30" Margin="127,280,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="100" Background="WhiteSmoke"/>
+        <Label Content="Is emergency?" HorizontalAlignment="Left" Height="30" Margin="13,320,0,0" VerticalAlignment="Top" Width="100" Background="WhiteSmoke"/>
+        <TextBox x:Name="emergency_txt" IsReadOnly="True" HorizontalAlignment="Left" Height="30" Margin="127,320,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="100" Background="WhiteSmoke"/>
+        <Label Content="Date" HorizontalAlignment="Left" Height="30" Margin="13,360,0,0" VerticalAlignment="Top" Width="100" Background="WhiteSmoke"/>
+        <TextBox x:Name="date_txt" HorizontalAlignment="Left" Height="30" Margin="127,360,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="100" Background="WhiteSmoke"/>
+        <Label Content="Start time" HorizontalAlignment="Left" Height="30" Margin="13,400,0,0" VerticalAlignment="Top" Width="100" Background="WhiteSmoke"/>
+        <TextBox x:Name="start_txt" HorizontalAlignment="Left" Height="30" Margin="127,400,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="100" Background="WhiteSmoke"/>
+        <Label Content="Duration" HorizontalAlignment="Left" Height="30" Margin="253,240,0,0" VerticalAlignment="Top" Width="100" Background="WhiteSmoke"/>
+        <TextBox x:Name="duration_txt" IsReadOnly="True" HorizontalAlignment="Left" Height="30" Margin="367,240,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="100" Background="WhiteSmoke"/>
+        <Label Content="Doctor" HorizontalAlignment="Left" Height="30" Margin="253,280,0,0" VerticalAlignment="Top" Width="100" Background="WhiteSmoke"/>
+        <ComboBox x:Name="doctors_comboBox" HorizontalAlignment="Left" Height="30" Margin="367,280,0,0" VerticalAlignment="Top" Width="100"/>
+        <Label Content="Doctor Id" HorizontalAlignment="Left" Height="30" Margin="253,320,0,0" VerticalAlignment="Top" Width="100" Background="WhiteSmoke"/>
+        <TextBox x:Name="doctorId_txt" IsReadOnly="True" HorizontalAlignment="Left" Height="30" Margin="367,320,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="100" Background="WhiteSmoke"/>
+        <Label Content="Patient" HorizontalAlignment="Left" Height="30" Margin="253,360,0,0" VerticalAlignment="Top" Width="100" Background="WhiteSmoke"/>
+        <TextBox x:Name="patient_txt" IsReadOnly="True" HorizontalAlignment="Left" Height="30" Margin="367,360,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="100" Background="WhiteSmoke"/>
+        <Label Content="Status" HorizontalAlignment="Left" Height="30" Margin="253,400,0,0" VerticalAlignment="Top" Width="100" Background="WhiteSmoke"/>
+        <TextBox x:Name="status_txt" IsReadOnly="True" HorizontalAlignment="Left" Height="30" Margin="367,400,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="100" Background="WhiteSmoke"/>
+        <Button x:Name="Insert_Button" Content="INSERT" HorizontalAlignment="Left" Height="53" Margin="545,239,0,0" VerticalAlignment="Top" Width="127" Click="Insert_Click"/>
+        <Button x:Name="Update_Button" Content="UPDATE" HorizontalAlignment="Left" Height="53" Margin="545,329,0,0" VerticalAlignment="Top" Width="127" Click="Update_Click"/>
+        <Button x:Name="Delete_Button" Content="DELETE" HorizontalAlignment="Left" Height="53" Margin="696,242,0,0" VerticalAlignment="Top" Width="127" Click="Delete_Click"/>
+        <Button x:Name="Clear_Button" Content="CLEAR" HorizontalAlignment="Left" Height="53" Margin="696,329,0,0" VerticalAlignment="Top" Width="127" Click="Clear_Click"/>
+        <Button Content="Back" HorizontalAlignment="Left" Height="25" Margin="760,5,0,0" VerticalAlignment="Top" Width="110" Click="Back_Click"/>
+
+    </Grid>
+</Window>

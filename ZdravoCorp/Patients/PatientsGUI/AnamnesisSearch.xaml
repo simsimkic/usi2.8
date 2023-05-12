@@ -1,0 +1,47 @@
+﻿<Window x:Class="ZdravoCorp.Patients.PatientsGUI.AnamnesisSearch"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ZdravoCorp.Patients.PatientsGUI"
+        mc:Ignorable="d"
+        Title="AnamnesisSearch" Background="PapayaWhip" Height="500" Width="800">
+    <Grid>
+        <Label Content="Medical Record" HorizontalAlignment="Left" Height="38" VerticalAlignment="Top" Width="296" FontSize="20" FontWeight="Bold" Margin="297,10,0,0"/>
+        <Button Content="Back" HorizontalAlignment="Left" Height="24" Margin="692,5,0,0" VerticalAlignment="Top" Width="90" Click="Back_Click"/>
+        <Label Content="Medical Record ID:" HorizontalAlignment="Left" Height="34" Margin="10,59,0,0" VerticalAlignment="Top" Width="121"/>
+        <TextBox x:Name="id_txt" IsReadOnly="true" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="34" Margin="136,59,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="111"/>
+        <Label Content="Height:" HorizontalAlignment="Left" Height="34" Margin="279,60,0,0" VerticalAlignment="Top" Width="121"/>
+        <TextBox x:Name="height_txt" IsReadOnly="true" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="34" Margin="360,60,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="111"/>
+        <Label Content="Weight:" HorizontalAlignment="Left" Height="34" Margin="511,60,0,0" VerticalAlignment="Top" Width="121"/>
+        <TextBox x:Name="weight_txt" IsReadOnly="true" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="34" Margin="588,60,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="111"/>
+
+        <DataGrid x:Name="AnamnesisTable" HorizontalAlignment="Center" Margin="0,110,0,0" VerticalAlignment="Top" Width="800" Height="176">
+            <DataGrid.Resources>
+                <Style TargetType="{x:Type DataGridColumnHeader}">
+                    <Setter Property="Background" Value="Coral"/>
+                    <Setter Property="FontWeight" Value="Bold"/>
+                    <Setter Property="BorderThickness" Value="0, 0, 1, 2"/>
+                    <Setter Property="BorderBrush" Value="Black"/>
+                    <Setter Property="HorizontalContentAlignment" Value="Center"></Setter>
+                </Style>
+            </DataGrid.Resources>
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Date" Width="80" Binding="{Binding anamnesis.date}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Observation"  Width="320" Binding="{Binding anamnesis.observation}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Doctro Id" Width="70" Binding="{Binding anamnesis.doctorId}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Doctor Name"  Width="110" Binding="{Binding doctor.name}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Doctor Lastname" Width="110" Binding="{Binding doctor.lastname}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Speciality" Width="110" Binding="{Binding doctor.specialty}"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Label Content="Allergens" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Height="34" Margin="25,314,0,0" VerticalAlignment="Top" Width="121"/>
+        <TextBox x:Name="allergens_txt" HorizontalAlignment="Left" IsReadOnly="True" Height="34" Margin="146,314,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="597"/>
+        <Label Content="Search" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Height="34" Margin="25,379,0,0" VerticalAlignment="Top" Width="121"/>
+        <TextBox x:Name="search_txt" TextChanged="Textbox_textChanged" HorizontalAlignment="Left" Height="34" Margin="42,418,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="300"/>
+        <Label Content="Sort by" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Height="34" Margin="418,379,0,0" VerticalAlignment="Top" Width="150"/>
+        <ComboBox x:Name="comboBoxForSort" HorizontalAlignment="Left" Height="34" Margin="418,419,0,0" VerticalAlignment="Top" Width="150"/>
+        <Button Content="SORT" HorizontalAlignment="Left" Height="34" Margin="593,419,0,0" VerticalAlignment="Top" Width="128" Click="Sort_Click"/>
+
+    </Grid>
+</Window>

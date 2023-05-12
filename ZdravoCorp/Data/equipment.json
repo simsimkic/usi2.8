@@ -1,0 +1,240 @@
+[
+  {
+    "name": "Chair",
+    "quantity": 1,
+    "roomId": 1,
+    "isDynamic": false,
+    "type": 3
+  },
+  {
+    "name": "Sccissors",
+    "quantity": 1,
+    "roomId": 102,
+    "isDynamic": true,
+    "type": 1
+  },
+  {
+    "name": "Sccissors",
+    "quantity": 2,
+    "roomId": 103,
+    "isDynamic": true,
+    "type": 1
+  },
+  {
+    "name": "Gauze",
+    "quantity": 3,
+    "roomId": 102,
+    "isDynamic": true,
+    "type": 1
+  },
+  {
+    "name": "Otoscope",
+    "quantity": 7,
+    "roomId": 103,
+    "isDynamic": true,
+    "type": 0
+  },
+  {
+    "name": "Wardrobe",
+    "quantity": 1,
+    "roomId": 103,
+    "isDynamic": false,
+    "type": 3
+  },
+  {
+    "name": "Penlight",
+    "quantity": 14,
+    "roomId": 0,
+    "isDynamic": true,
+    "type": 0
+  },
+  {
+    "name": "Bench",
+    "quantity": 15,
+    "roomId": 0,
+    "isDynamic": false,
+    "type": 2
+  },
+  {
+    "name": "Penlight",
+    "quantity": 10,
+    "roomId": 103,
+    "isDynamic": true,
+    "type": 0
+  },
+  {
+    "name": "Bed",
+    "quantity": 4,
+    "roomId": 306,
+    "isDynamic": false,
+    "type": 3
+  },
+  {
+    "name": "Needles",
+    "quantity": 28,
+    "roomId": 0,
+    "isDynamic": true,
+    "type": 1
+  },
+  {
+    "name": "Blades",
+    "quantity": 36,
+    "roomId": 0,
+    "isDynamic": true,
+    "type": 1
+  },
+  {
+    "name": "Pen",
+    "quantity": 1,
+    "roomId": 103,
+    "isDynamic": true,
+    "type": 1
+  },
+  {
+    "name": "Paper",
+    "quantity": 2,
+    "roomId": 103,
+    "isDynamic": true,
+    "type": 1
+  },
+  {
+    "name": "Paper",
+    "quantity": 1,
+    "roomId": 102,
+    "isDynamic": true,
+    "type": 1
+  },
+  {
+    "name": "Bandage",
+    "quantity": 3,
+    "roomId": 0,
+    "isDynamic": true,
+    "type": 1
+  },
+  {
+    "name": "Bed",
+    "quantity": 11,
+    "roomId": 0,
+    "isDynamic": false,
+    "type": 3
+  },
+  {
+    "name": "Otoscope",
+    "quantity": 0,
+    "roomId": 0,
+    "isDynamic": true,
+    "type": 0
+  },
+  {
+    "name": "Pen",
+    "quantity": 3,
+    "roomId": 102,
+    "isDynamic": true,
+    "type": 1
+  },
+  {
+    "name": "Otoscope",
+    "quantity": 1,
+    "roomId": 102,
+    "isDynamic": true,
+    "type": 0
+  },
+  {
+    "name": "Wardrobe",
+    "quantity": 1,
+    "roomId": 101,
+    "isDynamic": false,
+    "type": 3
+  },
+  {
+    "name": "Penlight",
+    "quantity": 1,
+    "roomId": 101,
+    "isDynamic": true,
+    "type": 0
+  },
+  {
+    "name": "Needles",
+    "quantity": 2,
+    "roomId": 103,
+    "isDynamic": true,
+    "type": 1
+  },
+  {
+    "name": "Wardrobe",
+    "quantity": 2,
+    "roomId": 0,
+    "isDynamic": false,
+    "type": 3
+  },
+  {
+    "name": "Pen",
+    "quantity": 0,
+    "roomId": 306,
+    "isDynamic": true,
+    "type": 1
+  },
+  {
+    "name": "Chair",
+    "quantity": 2,
+    "roomId": 306,
+    "isDynamic": false,
+    "type": 3
+  },
+  {
+    "name": "Otoscope",
+    "quantity": 2,
+    "roomId": 203,
+    "isDynamic": true,
+    "type": 0
+  },
+  {
+    "name": "Chair",
+    "quantity": 1,
+    "roomId": 304,
+    "isDynamic": false,
+    "type": 3
+  },
+  {
+    "name": "Chair",
+    "quantity": 2,
+    "roomId": 303,
+    "isDynamic": false,
+    "type": 3
+  },
+  {
+    "name": "Sccissors",
+    "quantity": 1,
+    "roomId": 101,
+    "isDynamic": true,
+    "type": 1
+  },
+  {
+    "name": "Gauze",
+    "quantity": 2,
+    "roomId": 101,
+    "isDynamic": true,
+    "type": 1
+  },
+  {
+    "name": "Chair",
+    "quantity": 3,
+    "roomId": 2,
+    "isDynamic": false,
+    "type": 3
+  },
+  {
+    "name": "Blades",
+    "quantity": 3,
+    "roomId": 101,
+    "isDynamic": true,
+    "type": 1
+  },
+  {
+    "name": "Paper",
+    "quantity": 2,
+    "roomId": 0,
+    "isDynamic": true,
+    "type": 3
+  }
+]

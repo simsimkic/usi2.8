@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "name": "Vesna",
+    "lastname": "Zubac",
+    "username": "vesna",
+    "password": "vesna",
+    "phoneNumber": "061/1234567",
+    "gender": 0,
+    "role": 0
+  },
+  {
+    "id": 2,
+    "name": "Tamara",
+    "lastname": "Zubac",
+    "username": "tamara",
+    "password": "tamara",
+    "phoneNumber": "062/1234567",
+    "gender": 0,
+    "role": 1
+  },
+  {
+    "id": 3,
+    "name": "Bojan",
+    "lastname": "Gelic",
+    "username": "bojan",
+    "password": "bojan",
+    "phoneNumber": "063/1234567",
+    "gender": 1,
+    "role": 3
+  },
+  {
+    "id": 4,
+    "name": "Danilo",
+    "lastname": "Cavic",
+    "username": "danilo",
+    "password": "danilo",
+    "phoneNumber": "064/1234567",
+    "gender": 1,
+    "role": 2
+  },
+  {
+    "id": 7,
+    "name": "Pera",
+    "lastname": "Peric",
+    "username": "peraP4",
+    "password": "dasda",
+    "phoneNumber": "061/213/2104",
+    "gender": 1,
+    "role": 3
+  },
+  {
+    "id": 6,
+    "name": "Marija",
+    "lastname": "Nemanjic",
+    "username": "marija2",
+    "password": "marija",
+    "phoneNumber": "069/1234567",
+    "gender": 1,
+    "role": 3
+  },
+  {
+    "id": 8,
+    "name": "Teodora",
+    "lastname": "Vucetic",
+    "username": "teodora",
+    "password": "teodora",
+    "phoneNumber": "060/4287808",
+    "gender": 0,
+    "role": 3
+  },
+  {
+    "id": 9,
+    "name": "Daca",
+    "lastname": "Danilovic",
+    "username": "cikadaca",
+    "password": "cikadaca",
+    "phoneNumber": "016123124",
+    "gender": 1,
+    "role": 3
+  }
+]

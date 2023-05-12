@@ -1,0 +1,28 @@
+﻿<Window x:Name="nurseWindow" x:Class="ZdravoCorp.NurseWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ZdravoCorp"
+        mc:Ignorable="d"
+        Title="Nurse" Height="481" Width="800">
+    <Grid Margin="0,0,0,-6" HorizontalAlignment="Center" Width="800">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="158*"/>
+            <RowDefinition Height="299*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="30*"/>
+            <ColumnDefinition Width="121*"/>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition Width="641*"/>
+            <ColumnDefinition Width="8*"/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="ButtonLogOut" Grid.Column="3" Content="Log out" HorizontalAlignment="Left" Margin="247,126,0,0" VerticalAlignment="Top" Width="210" Height="45" Grid.Row="1" Click="ButtonLogOut_Click"/>
+        <Button x:Name="ButtonPatients" Grid.Column="3" Content="Patients" HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top" Width="210" Height="45" Grid.Row="1" Click="ButtonPatients_Click"/>
+        <Label x:Name="LabelWelcome" Grid.Column="3" Content="Label" Margin="77,99,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.58,0.505" Width="471" Height="45" HorizontalAlignment="Left" FontSize="30" FontWeight="Bold"/>
+        <Button x:Name="ButtonReception" Grid.Column="3" Content="Admission of patients" HorizontalAlignment="Left" Margin="247,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="210" Height="45" Click="ButtonReception_Click"/>
+        <Button x:Name="ButtonEmergency" Grid.Column="3" Content="Emergency" HorizontalAlignment="Left" Margin="0,126,0,0" Grid.Row="1" VerticalAlignment="Top" Width="210" Height="45" Click="ButtonEmergency_Click"/>
+
+    </Grid>
+</Window>

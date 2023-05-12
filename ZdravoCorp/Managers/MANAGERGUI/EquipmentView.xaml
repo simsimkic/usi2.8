@@ -1,0 +1,58 @@
+﻿<Window x:Class="ZdravoCorp.Managers.MANAGERGUI.EquipmentView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ZdravoCorp.Managers.MANAGERGUI"
+        mc:Ignorable="d"
+        Title="EquipmentView" Height="500" Width="900" FontSize="14" Background="AliceBlue">
+    <Grid Margin="0,59,0,-38">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="45*"/>
+            <ColumnDefinition Width="31*"/>
+            <ColumnDefinition Width="824*"/>
+        </Grid.ColumnDefinitions>
+        <DataGrid  Name="EquipmentGrid" Margin="72,0,29,52" ColumnWidth="150" IsReadOnly="True" Grid.Column="2">
+            <DataGrid.Resources>
+                <Style TargetType="{x:Type DataGridColumnHeader}">
+                    <Setter Property="Background" Value="Turquoise"/>
+                    <Setter Property="FontWeight" Value="SemiBold"/>
+                    <Setter Property="BorderThickness" Value="0,0,2,2"/>
+                    <Setter Property="BorderBrush" Value="Black"/>
+                </Style>
+            </DataGrid.Resources>
+            <DataGrid.Columns>
+
+            </DataGrid.Columns>
+        </DataGrid>
+        <Label Content="Search:" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.59,-6.98" FontFamily="Bradley Hand ITC" FontSize="14" FontWeight="Bold" Margin="5,-7,0,0" Grid.ColumnSpan="2"/>
+        <TextBox  HorizontalAlignment="Right" TextWrapping="Wrap" Text=""  VerticalAlignment="Top" Width="94" Height="30" RenderTransformOrigin="0.531,-0.548" Margin="0,25,784,0" TextChanged="SearchTextBoxInput" AutomationProperties.HelpText="Search by attributes" FontSize="12" Grid.ColumnSpan="3"/>
+        <Label Content="Filter by:" HorizontalAlignment="Left" Margin="4,55,0,0" VerticalAlignment="Top" FontFamily="Britannic Bold" Width="104" FontSize="16" Grid.ColumnSpan="3"/>
+        <ComboBox x:Name="EquipmentType" Text="Equipment Type" HorizontalAlignment="Right" Margin="0,118,774,0" VerticalAlignment="Top" Width="104" SelectionChanged="EquipmentTypeSelectionChanged" Grid.ColumnSpan="3" >
+            <ComboBoxItem Content="Examination"/>
+            <ComboBoxItem Content="Operation"/>
+            <ComboBoxItem Content="Hallway"/>
+            <ComboBoxItem Content="Furniture"/>
+        </ComboBox>
+        <Label Content="Equipment Type:" HorizontalAlignment="Left" Margin="0,88,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.272,0.414" Width="112" FontSize="12" FontWeight="Bold" FontFamily="Bradley Hand ITC" Grid.ColumnSpan="3"/>
+        <Label Content="RoomType:" HorizontalAlignment="Left" Margin="2,151,0,0" VerticalAlignment="Top" Width="101" FontSize="12" FontFamily="Bradley Hand ITC" FontWeight="Bold" Grid.ColumnSpan="3"/>
+        <ComboBox x:Name="RoomType" HorizontalAlignment="Left" Margin="10,181,0,0" VerticalAlignment="Top" Width="104" SelectionChanged="RoomTypeSelectionChanged" Grid.ColumnSpan="3">
+            <ComboBoxItem Content="Examination room"/>
+            <ComboBoxItem Content="Operation room"/>
+            <ComboBoxItem Content="Waiting room"/>
+            <ComboBoxItem Content="Inpatient room"/>
+
+        </ComboBox>
+        <Label Content="Quantity:" HorizontalAlignment="Left" Margin="5,214,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Bradley Hand ITC" FontSize="12" Grid.ColumnSpan="2"/>
+        <ComboBox x:Name="Quantity" HorizontalAlignment="Left" Margin="11,244,0,0" VerticalAlignment="Top" Width="105" SelectionChanged="QuantitySelectionChanged" Grid.ColumnSpan="3">
+            <ComboBoxItem Content="out of stock"/>
+            <ComboBoxItem Content="0-10"/>
+            <ComboBoxItem Content="10+"/>
+
+        </ComboBox>
+        <CheckBox x:Name="notInWarehouse" Content="Not in Warehouse" HorizontalAlignment="Left" Margin="5,302,0,0" VerticalAlignment="Top" Width="138"  Height="22" Grid.ColumnSpan="3"/>
+        <Button Content="View all" HorizontalAlignment="Left" Margin="11,-45,0,0" VerticalAlignment="Top" Width="83" FontStyle="Italic" Click="ViewAllButtonClick" Grid.ColumnSpan="3"/>
+        <Label Content="EQUIPMENT VIEW" HorizontalAlignment="Right" Margin="0,-48,312,0" VerticalAlignment="Top" Width="181" Height="37" FontFamily="Algerian" FontWeight="Bold" FontSize="20" Grid.Column="2" Background="PowderBlue"/>
+        <Button Content="Back" HorizontalAlignment="Left" Margin="11,346,0,0" VerticalAlignment="Top" RenderTransformOrigin="-3.547,0.382" Grid.ColumnSpan="3" Width="71" FontFamily="Baskerville Old Face" Click="BackButtonClick"/>
+    </Grid>
+</Window>

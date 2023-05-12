@@ -1,0 +1,52 @@
+﻿<Window x:Class="ZdravoCorp.Doctors.UpdateMedicalRecordWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ZdravoCorp.Doctors"
+        mc:Ignorable="d"
+        Title="UpdateMedicalRecordWindow" Height="450" Width="800">
+    <Grid Margin="2,-1,-2,-66">
+        <Label Content="Medical Record ID :" HorizontalAlignment="Left" Margin="35,69,0,0" VerticalAlignment="Top" Width="128" FontSize="14" FontFamily="Cambria Math"/>
+        <TextBlock HorizontalAlignment="Left"  Text="{Binding id}" Margin="160,71,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="26" FontSize="14"/>
+        <Label Content="Patient ID :" HorizontalAlignment="Left" Margin="35,110,0,0" VerticalAlignment="Top" Width="76" FontSize="14" FontFamily="Cambria Math"/>
+        <TextBlock HorizontalAlignment="Left"  Text="{Binding PatientId, RelativeSource={RelativeSource AncestorType={x:Type Window}}}" Margin="116,112,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="26" FontSize="14"/>
+        <Label Content="Height :" HorizontalAlignment="Left" Margin="35,141,0,0" VerticalAlignment="Top" Width="57" FontFamily="Cambria Math" FontSize="14"/>
+        <TextBox HorizontalAlignment="Left" Name="newHeight" Text="{Binding height}" Margin="92,145,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="48" Height="22" FontSize="14" RenderTransformOrigin="0.688,-0.544"/>
+        <Label Content="Weight: "   HorizontalAlignment="Left" Margin="172,145,0,0" VerticalAlignment="Top" Height="26" Width="64" FontSize="14" FontFamily="Cambria Math"/>
+        <TextBox HorizontalAlignment="Left" Name="newWeight" Text="{Binding weight}" Margin="236,145,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="56" Height="22" FontSize="14"/>
+        <Label Content="Allergens : "  HorizontalAlignment="Left" Margin="35,182,0,0" VerticalAlignment="Top" FontSize="14" FontFamily="Cambria Math" RenderTransformOrigin="0.524,-1.172"/>
+        <TextBox HorizontalAlignment="Left" Name="newAllergens" Text="{Binding allergens}" Margin="111,182,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="204" Height="26" FontSize="14"/>
+        <Label Content="Patients Medical History :" HorizontalAlignment="Left" Margin="353,65,0,0" VerticalAlignment="Top" Width="170" FontSize="14" FontFamily="Cambria Math"/>
+        <ListView Name="anamnesis" Margin="353,98,27,235">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Date of MHE" Width="100">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate >
+                                <TextBlock Text="{Binding date}" HorizontalAlignment="Center" />
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Header="Observation" Width="300">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate >
+                                <TextBlock Text="{Binding observation}" HorizontalAlignment="Center" />
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Label Content="Patients Medical Record " HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Width="247" FontFamily="Cambria Math" FontSize="22" FontWeight="Bold" Background="AntiqueWhite"/>
+        <Button Content="Commit changes" Background="PapayaWhip" HorizontalAlignment="Center" Margin="0,375,0,0" VerticalAlignment="Top" Width="196" FontFamily="Cambria Math" FontSize="16" RenderTransformOrigin="0.515,-0.218" Height="33" Click="Button_Click_1"/>
+        <Button Content="Add Anamnesis" HorizontalAlignment="Left" Margin="423,306,0,0" VerticalAlignment="Top" Width="125" FontFamily="Cambria Math" FontSize="14" Click="Button_Click"/>
+        <Label Content="Date of MHE :" HorizontalAlignment="Left" Margin="27,259,0,0" VerticalAlignment="Top" Width="93" FontFamily="Cambria Math" FontSize="14"/>
+        <DatePicker Name="newDate"  HorizontalAlignment="Left" Margin="142,259,0,0" VerticalAlignment="Top" Width="124"/>
+        <Label Content="Observation : " HorizontalAlignment="Left" Margin="27,303,0,0" VerticalAlignment="Top" Width="93" FontSize="14" FontFamily="Cambria Math"/>
+        <TextBox Name="newObservation" HorizontalAlignment="Left" Margin="125,303,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="253" Height="54"/>
+
+
+    </Grid>
+</Window>

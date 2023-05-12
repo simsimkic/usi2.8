@@ -1,0 +1,174 @@
+[
+  {
+    "examinationId": 1,
+    "admission": true
+  },
+  {
+    "examinationId": 2,
+    "admission": false
+  },
+  {
+    "examinationId": 3,
+    "admission": false
+  },
+  {
+    "examinationId": 4,
+    "admission": false
+  },
+  {
+    "examinationId": 5,
+    "admission": false
+  },
+  {
+    "examinationId": 6,
+    "admission": false
+  },
+  {
+    "examinationId": 7,
+    "admission": false
+  },
+  {
+    "examinationId": 8,
+    "admission": true
+  },
+  {
+    "examinationId": 9,
+    "admission": false
+  },
+  {
+    "examinationId": 10,
+    "admission": false
+  },
+  {
+    "examinationId": 11,
+    "admission": false
+  },
+  {
+    "examinationId": 12,
+    "admission": false
+  },
+  {
+    "examinationId": 13,
+    "admission": false
+  },
+  {
+    "examinationId": 14,
+    "admission": false
+  },
+  {
+    "examinationId": 15,
+    "admission": false
+  },
+  {
+    "examinationId": 16,
+    "admission": false
+  },
+  {
+    "examinationId": 17,
+    "admission": true
+  },
+  {
+    "examinationId": 18,
+    "admission": false
+  },
+  {
+    "examinationId": 19,
+    "admission": false
+  },
+  {
+    "examinationId": 20,
+    "admission": false
+  },
+  {
+    "examinationId": 21,
+    "admission": false
+  },
+  {
+    "examinationId": 22,
+    "admission": false
+  },
+  {
+    "examinationId": 23,
+    "admission": false
+  },
+  {
+    "examinationId": 24,
+    "admission": false
+  },
+  {
+    "examinationId": 25,
+    "admission": false
+  },
+  {
+    "examinationId": 26,
+    "admission": false
+  },
+  {
+    "examinationId": 27,
+    "admission": false
+  },
+  {
+    "examinationId": 28,
+    "admission": false
+  },
+  {
+    "examinationId": 29,
+    "admission": false
+  },
+  {
+    "examinationId": 31,
+    "admission": false
+  },
+  {
+    "examinationId": 32,
+    "admission": false
+  },
+  {
+    "examinationId": 33,
+    "admission": false
+  },
+  {
+    "examinationId": 34,
+    "admission": false
+  },
+  {
+    "examinationId": 35,
+    "admission": false
+  },
+  {
+    "examinationId": 36,
+    "admission": false
+  },
+  {
+    "examinationId": 37,
+    "admission": false
+  },
+  {
+    "examinationId": 38,
+    "admission": false
+  },
+  {
+    "examinationId": 39,
+    "admission": false
+  },
+  {
+    "examinationId": 40,
+    "admission": false
+  },
+  {
+    "examinationId": 41,
+    "admission": false
+  },
+  {
+    "examinationId": 42,
+    "admission": false
+  },
+  {
+    "examinationId": 43,
+    "admission": false
+  },
+  {
+    "examinationId": 44,
+    "admission": false
+  }
+]

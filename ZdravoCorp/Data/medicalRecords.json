@@ -1,0 +1,106 @@
+[
+  {
+    "id": 1,
+    "height": 178,
+    "weight": 81,
+    "medicalHistory": [
+      {
+        "observation": "temperature 37",
+        "date": "2023-04-05",
+        "doctorId": 2
+      },
+      {
+        "observation": "broken arm",
+        "date": "2023-05-02",
+        "doctorId": 2
+      },
+      {
+        "observation": "broken leg",
+        "date": "2023-05-20",
+        "doctorId": 2
+      },
+      {
+        "observation": "broken head",
+        "date": "2023-05-06",
+        "doctorId": 2
+      }
+    ],
+    "referrals": [
+      {
+        "isInternist": true
+      }
+    ],
+    "allergens": "Penicilin"
+  },
+  {
+    "id": 3,
+    "height": 163,
+    "weight": 54,
+    "medicalHistory": [
+      {
+        "observation": "Temperatura 39.2 ",
+        "date": "2023-05-04",
+        "doctorId": 2
+      },
+      {
+        "observation": "headache",
+        "date": "2023-05-10",
+        "doctorId": 2
+      }
+    ],
+    "referrals": null,
+    "allergens": "lactose"
+  },
+  {
+    "id": 4,
+    "height": 190,
+    "weight": 86,
+    "medicalHistory": [
+      {
+        "observation": "temperature 38.5",
+        "date": "2023-03-05",
+        "doctorId": 5
+      }
+    ],
+    "referrals": null,
+    "allergens": "None"
+  },
+  {
+    "id": 2,
+    "height": 100,
+    "weight": 120,
+    "medicalHistory": [
+      {
+        "observation": "temperature 40",
+        "date": "2023-07-02",
+        "doctorId": 2
+      },
+      {
+        "observation": "temperature 38, headache",
+        "date": "2023-04-06",
+        "doctorId": 2
+      },
+      {
+        "observation": "temperature 38.5",
+        "date": "2023-05-03",
+        "doctorId": 2
+      },
+      {
+        "observation": "headache",
+        "date": "2023-05-04",
+        "doctorId": 2
+      },
+      {
+        "observation": "diabetes type 2",
+        "date": "2023-05-04",
+        "doctorId": 2
+      }
+    ],
+    "referrals": [
+      {
+        "isInternist": true
+      }
+    ],
+    "allergens": "Penicilin"
+  }
+]

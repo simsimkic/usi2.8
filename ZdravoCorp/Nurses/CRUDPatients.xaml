@@ -1,0 +1,46 @@
+﻿<Window x:Name="CRUDPatientsWindow" x:Class="ZdravoCorp.Nurses.CRUDPatients"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ZdravoCorp.Nurses"
+        mc:Ignorable="d"
+        Title="CRUDPatients" Height="464" Width="800">
+    <Grid Margin="0,0,0,-6">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="33*"/>
+            <ColumnDefinition Width="367*"/>
+        </Grid.ColumnDefinitions>
+        <DataGrid x:Name="DataGridPatients" Margin="0,20,88,85" Grid.Column="1">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Width="50" Binding="{Binding id}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Name" Width="100" Binding="{Binding name}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Surname" Width="100" Binding="{Binding lastname}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Username" Width="100" Binding="{Binding username}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Phone number" Width="100" Binding="{Binding phoneNumber}"></DataGridTextColumn>
+                <DataGridTextColumn x:Name="DataGridTextColumnRole" Header="Role" Width="50" Binding="{Binding gender}"></DataGridTextColumn>
+                <DataGridTemplateColumn Header="Medical record" Width="*">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button x:Name="ButtonMedicalRecord" Content="Medical record" Click="ButtonMedicalRecord_Click"></Button>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+            </DataGrid.Columns>
+
+            <DataGrid.Resources>
+                <Style TargetType="{x:Type DataGridColumnHeader}">
+                    <Setter Property="Background" Value="LightGray"></Setter>
+                    <Setter Property="FontWeight" Value="SemiBold"></Setter>
+                    <Setter Property="BorderThickness" Value="0,0,1,2"></Setter>
+                    <Setter Property="BorderBrush" Value="Black"></Setter>
+                </Style>
+            </DataGrid.Resources>
+            
+        </DataGrid>
+        <Button x:Name="ButtonAddPattint" Grid.Column="1" Content="Add new patient" HorizontalAlignment="Left" Margin="0,393,0,0" VerticalAlignment="Top" Width="125" Height="20" Click="ButtonAddPattint_Click"/>
+        <Button x:Name="ButtonUpdatePatient" Grid.Column="1" Content="Update patient" HorizontalAlignment="Left" Margin="170,393,0,0" VerticalAlignment="Top" Width="125" Height="20" Click="ButtonUpdatePatient_Click"/>
+        <Button x:Name="ButtonDeletePatient" Grid.Column="1" Content="Delete patient" HorizontalAlignment="Left" Margin="348,393,0,0" VerticalAlignment="Top" Width="125" Height="20" Click="ButtonDeletePatient_Click"/>
+        <Button x:Name="ButtonBack" Grid.Column="1" Content="Back to main page" HorizontalAlignment="Left" Margin="521,393,0,0" VerticalAlignment="Top" Width="125" Height="20" Click="Button_Click"/>
+    </Grid>
+</Window>

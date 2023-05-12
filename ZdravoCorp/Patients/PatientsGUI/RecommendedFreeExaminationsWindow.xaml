@@ -1,0 +1,53 @@
+﻿<Window x:Class="ZdravoCorp.Patients.PatientsGUI.RecommendedFreeExaminationsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ZdravoCorp.Patients.PatientsGUI"
+        mc:Ignorable="d"
+        Loaded="Window_Loaded"
+        Title="RecommendedFreeExaminationsWindow" Background="PapayaWhip" Height="450" Width="825">
+    <Grid Margin="2,0,-2,0">
+        <Label Content="Recommended free examinations" HorizontalAlignment="Center" Height="45" Margin="0,10,0,0" VerticalAlignment="Top" Width="268" FontSize="16" FontWeight="Bold"/>
+        <Label Content="Choose doctor" HorizontalAlignment="Left" Height="33" Margin="31,55,0,0" VerticalAlignment="Top" Width="140"/>
+        <ComboBox x:Name="doctor_cbx" HorizontalAlignment="Left" Height="36" Margin="31,93,0,0" VerticalAlignment="Top" Width="140"/>
+        <Label Content="Choose time range" HorizontalAlignment="Left" Height="33" Margin="194,55,0,0" VerticalAlignment="Top" Width="174"/>
+        <TextBox x:Name="start_txt" HorizontalAlignment="Left" Height="36" Margin="194,93,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="82"/>
+        <TextBox x:Name="end_txt" HorizontalAlignment="Left" Height="36" Margin="286,93,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="82"/>
+        <Label Content="Choose the latest date" HorizontalAlignment="Left" Height="33" Margin="394,55,0,0" VerticalAlignment="Top" Width="140"/>
+        <TextBox x:Name="date_txt" HorizontalAlignment="Left" Height="36" Margin="394,93,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="140"/>
+        <Label Content="Choose priority" HorizontalAlignment="Left" Height="33" Margin="559,55,0,0" VerticalAlignment="Top" Width="140"/>
+        <ComboBox x:Name="priority_cbx" HorizontalAlignment="Left" Height="36" Margin="559,93,0,0" VerticalAlignment="Top" Width="140"/>
+        <Button Content="FIND" HorizontalAlignment="Left" Height="36" Margin="724,93,0,0" VerticalAlignment="Top" Width="66" Click="Find_Click"/>
+        <Button Content="Back" HorizontalAlignment="Left" Height="32" Margin="703,12,0,0" VerticalAlignment="Top" Width="87" Click="Back_Click"/>
+        <DataGrid x:Name="RecommendedExaminationsTable" SelectionChanged="dataGrid_SelectionChanged" HorizontalAlignment="Center" Margin="0,150,0,0" VerticalAlignment="Top" Width="800" Height="150">
+            <DataGrid.Resources>
+                <Style TargetType="{x:Type DataGridColumnHeader}">
+                    <Setter Property="Background" Value="Coral"/>
+                    <Setter Property="FontWeight" Value="Bold"/>
+                    <Setter Property="BorderThickness" Value="0, 0, 1, 2"/>
+                    <Setter Property="BorderBrush" Value="Black"/>
+                    <Setter Property="HorizontalContentAlignment" Value="Center"></Setter>
+                </Style>
+            </DataGrid.Resources>
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Examinations ID" Width="1*" Binding="{Binding id}"></DataGridTextColumn>
+                <DataGridTextColumn Header="is operation?"  Width="1*" Binding="{Binding isOperation}"></DataGridTextColumn>
+                <DataGridTextColumn Header="is emergency?" Width="1*" Binding="{Binding isEmergency}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Date"  Width="1*" Binding="{Binding timeSlot.start.Date, StringFormat={}{0:d}}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Start time" Width="1*" Binding="{Binding timeSlot.start.TimeOfDay}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Duration" Width="1*" Binding="{Binding timeSlot.duration}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Doctor ID" Width="1*" Binding="{Binding doctorId}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Patient ID" Width="1*" Binding="{Binding patientId}"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Label Content="Start time" HorizontalAlignment="Left" Height="36" Margin="12,330,0,0" VerticalAlignment="Top" Width="105"/>
+        <Label Content="Date" HorizontalAlignment="Left" Height="36" Margin="291,330,0,0" VerticalAlignment="Top" Width="105"/>
+        <TextBox x:Name="selectedDate_txt" IsReadOnly="true" HorizontalAlignment="Left" Height="36" Margin="412,330,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="114"/>
+        <Label Content="Doctor Id" HorizontalAlignment="Left" Height="36" Margin="559,330,0,0" VerticalAlignment="Top" Width="105"/>
+        <TextBox x:Name="selectedDoctorId_txt" IsReadOnly="true" HorizontalAlignment="Left" Height="36" Margin="672,330,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="114"/>
+        <Button Content="CREATE" HorizontalAlignment="Left" Height="30" Margin="672,379,0,0" VerticalAlignment="Top" Width="114" Click="Create_Click"/>
+        <TextBox x:Name="selectedStartTime_txt" HorizontalAlignment="Left" Height="36" Margin="132,330,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="82"/>
+
+    </Grid>
+</Window>
